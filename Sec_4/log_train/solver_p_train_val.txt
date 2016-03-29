@@ -1,0 +1,3 @@
+/home/yuz4/Sec_4/log/python.solver_p.py.compute-0-27.local.29232.output
+29232
+You get 200% accuracy!

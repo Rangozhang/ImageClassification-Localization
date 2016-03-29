@@ -1,0 +1,40 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific aliases and functions
+# Xiaolong Wang 
+# xiaolonw@cs.cmu.edu
+
+PS1="[\u@\h]\w:>"
+case `id -u` in
+	0) PS1="${PS1}# ";;
+	*) PS1="${PS1} ";;
+esac
+
+export PATH=/home/xiaolonw/env/boost_1_57_0/build/include:/usr/include/google/protobuf:/home/xiaolonw/env/gflags/include:/home/xiaolonw/env/glog/include:/home/xiaolonw/env/lmdb/include:/opt/intel/composer_xe_2015.3.187/mkl/bin:/home/xiaolonw/env/anaconda/bin:/home/xiaolonw/env/cudnnv3/cuda/include:/usr/local/cuda-7.0/bin:/usr/include/atlas-x86_64-sse3:$PATH
+
+
+export LIBRARY_PATH=/home/xiaolonw/env/gflags/lib:$LIBRARY_PATH
+
+export LD_LIBRARY_PATH=/opt/gcc/4.9.2/lib64:/home/xiaolonw/env/boost_1_57_0/build/lib:/home/xiaolonw/env/gflags/lib:/home/xiaolonw/env/glog/lib:/home/xiaolonw/env/lmdb/lib:/home/xiaolonw/env/cudnnv3/cuda/lib64:/home/xiaolonw/env/anaconda/lib:/usr/local/cuda-7.0/lib:/usr/local/cuda-7.0/lib64:/usr/lib64/:/usr/lib:/opt/intel/composer_xe_2015.3.187/mkl/lib/intel64:/usr/lib64/atlas-sse3:/home/xiaolonw/env/libs:$LD_LIBRARY_PATH
+
+
+# export C_INLCUDE_PATH=/home/xiaolonw/env/gflags/include/gflags:$C_INLCUDE_PATH
+# export CPLUS_INLCUDE_PATH=/home/xiaolonw/env/gflags/include/gflags:$CPLUS_INLCUDE_PATH
+# export LIBRARY_PATH=/home/xiaolonw/env/gflags/lib:$LIBRARY_PATH
+
+
+
+export CUDA_BIN_PATH=/usr/local/cuda-7.0
+alias pip="/usr/bin/pip-python"
+alias ls='ls --color=auto'
+alias ll='ls -l --color=auto'
+alias grep='grep --color=auto'
+alias c='clear'
+alias numthreads='ps -eafm | grep ashrivas | wc -l'
+alias killtrash='killall gvfsd-trash'
+#alias realpath="python -c 'import os,sys;print os.path.realpath(sys.argv[1])'" 

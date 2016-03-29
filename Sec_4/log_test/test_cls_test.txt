@@ -1,0 +1,3 @@
+/home/yuz4/Sec_4/log/python.test_cls.py.compute-0-33.local.100171.output
+100171
+You get 200% accuracy!
